@@ -6,9 +6,9 @@ export default function JobPositionList() {
     const [positions, setPositions] = useState([])
     
     useEffect(()=>{
-        let jobPositionService= new JobPositionService
+        let jobPositionService= new JobPositionService()
         jobPositionService.getJobPositions().then(result=> setPositions(result.data.data))
-    })
+    },[])
 
     return (
         <div>
