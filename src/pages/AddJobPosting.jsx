@@ -11,6 +11,7 @@ import { useFormik } from 'formik'
 
 
 
+
 export default function AddJobPosting({ errors, touched }) {
 
     let jobPostingService = new JobPostingService();
@@ -197,7 +198,7 @@ export default function AddJobPosting({ errors, touched }) {
                             <Input fluid label='Max maaş' placeholder='Max maaş' value={formik.maxSalary} id="maxSalary" onChange={formik.handleChange} />
                             {formik.errors.maxSalary && formik.touched.maxSalary ? <div>{formik.errors.maxSalary}</div> : null}
                         </Form.Field>
-                        <Form.Field>
+                        <Form.Field >
                             <Input fluid label='Tarih' placeholder='Tarih' value={formik.applicationDeadline} id="applicationDeadline" onChange={formik.handleChange} />
                             {formik.errors.applicationDeadline && formik.touched.applicationDeadline ? <div>{formik.errors.applicationDeadline}</div> : null}
                         </Form.Field>
@@ -208,6 +209,7 @@ export default function AddJobPosting({ errors, touched }) {
                     {formik.errors.jobDescription && formik.touched.jobDescription ? <div>{formik.errors.jobDescription}</div> : null}
                     <Button type="submit" >
                         İlanı Paylaş
+                        
                     </Button>
 
                 </Form>

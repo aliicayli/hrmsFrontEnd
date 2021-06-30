@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Button, Icon, Label, Menu, Table } from 'semantic-ui-react'
+import Slider from '../layouts/Slider';
 import EmployerService from '../services/employerService';
 
 export default function EmployerList() {
@@ -12,8 +13,11 @@ export default function EmployerList() {
     },[])
 
     return (
+        
         <div>
-            
+        <div>
+            <Slider></Slider>
+        </div>
             <Table color="blue">
                 <Table.Header>
                     <Table.Row>

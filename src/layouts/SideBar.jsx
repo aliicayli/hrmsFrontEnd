@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { Button, Icon, Menu } from 'semantic-ui-react'
 
 export default function SideBar() {
@@ -7,7 +8,7 @@ export default function SideBar() {
             <Menu fixed compact icon='labeled' vertical>
                 <Menu.Item
                     name='bullhorn'   >
-                    <Button color="blue" style={{width:"170px"}}>
+                    <Button color="blue" style={{width:"170px"}} as={NavLink} to="/jobposting">
                         <Icon name='bullhorn' />
                         
                             İş İlanları
